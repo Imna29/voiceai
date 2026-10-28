@@ -106,7 +106,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 | **OpenAI Realtime / GPT-Live / Gemini Live** | Realtime API | Speech-to-speech |
 
 <details>
-<summary><b>16 resources</b></summary>
+<summary><b>17 resources</b></summary>
 
 ### Open-source frameworks
 
@@ -127,6 +127,7 @@ The frameworks below all let you wire STT, an LLM, and TTS together. **For open-
 - 🟡 [OpenAI GPT-Live: Guide](https://developers.openai.com/api/docs/guides/live): Full-duplex voice model (`gpt-live-1`) that listens and speaks at once, decides when to yield or interrupt, and hands reasoning and tool calls to a backend text model; over WebRTC, WebSockets, or SIP.
 - 🟡 [Google Gemini Live API: Overview](https://ai.google.dev/gemini-api/docs/live-api): Low-latency, bidirectional voice + vision agents with barge-in and tool use, on `gemini-3.8-live` (plus an Extended Thinking variant).
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay): WebSocket bridge that handles STT/TTS so you focus on LLM logic; works with any LLM.
+- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime): OpenAI-Realtime-compatible speech-to-speech WebSocket for phone agents (47 languages, telephony support), with official Pipecat and LiveKit Agents plugins.
 ### Vendor-neutral comparisons
 
 - 🟡 [Vapi vs Pipecat vs LiveKit (AssemblyAI)](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit): Architecture-focused comparison of pipeline control and transport choices.
@@ -198,7 +199,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 | **Chatterbox** | Open source | Cloning + emotion control |
 
 <details>
-<summary><b>18 resources</b></summary>
+<summary><b>19 resources</b></summary>
 
 ### Commercial APIs
 
@@ -208,6 +209,7 @@ Pick **one streaming STT** and learn it deeply before shopping around. Deepgram,
 - 🟢 [OpenAI TTS (gpt-4o-mini-tts)](https://developers.openai.com/api/docs/guides/text-to-speech): Easiest plug-in TTS for the OpenAI stack.
 - 🟢 [Soniox Text-to-Speech](https://soniox.com/docs/tts/get-started): Low-latency streaming TTS over WebSocket with multilingual voices; pairs with Soniox STT and translation.
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech): Streaming WebSocket TTS with 158 ms P50 time to first audio and instant voice cloning in five languages.
+- 🟢 [Gandr TTS](https://gandr.ai/docs): Streaming TTS over SSE or WebSocket with 116 ms p50 time to first audio (vendor figure), six multilingual voices across 23 languages, and watermarked output; ships LiveKit Agents and Pipecat integrations.
 - 🟢 [Speechify Text-to-Speech API (Simba 3.2)](https://docs.speechify.ai/build/guides/get-started/quickstart): Streaming TTS over HTTP with SSML and emotion control; Simba 3.2 for English and Simba 3.0 for six languages, with a 106 ms median time to first audio on Coval's independent benchmark (September 2026).
 - 🟢 [Artificial Analysis: TTS leaderboard](https://artificialanalysis.ai/text-to-speech/models): ELO, price, and speed comparison covering Cartesia, ElevenLabs, Google, Inworld, Rime, Hume, and open-weights models.
 - 🟡 [Best Text-to-Speech Providers in 2026 (Coval)](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/): Independent head-to-head of 14 TTS providers on latency, naturalness, and cost; note the commercial author.
@@ -339,7 +341,7 @@ The phone network has its own physics. Once you know which **SIP trunk provider*
 - 🟡 [SignalWire Voice Docs](https://signalwire.com/docs/platform/voice): Built on FreeSWITCH; SWML, TwiML-compatible API, and an AI Agents SDK.
 - 🟢 [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/): Best diagram of how a call flows from PSTN → trunk → SIP service → agent.
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/): Practical guide for wiring Twilio/Telnyx/Plivo/Wavix/Sinch trunks into LiveKit.
-- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/realtime-sip): Point a SIP trunk at OpenAI's SIP endpoint and accept each call from a webhook, configuring the session per call with no media bridge server; an EU endpoint is available.
+- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip): Point a SIP trunk at OpenAI's SIP endpoint and accept each call from a webhook, configuring the session per call with no media bridge server; an EU endpoint is available.
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview): Differences between WebSocket-based telephony and SIP-based call control.
 
 </details>

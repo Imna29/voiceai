@@ -106,7 +106,7 @@
 | **OpenAI Realtime / GPT-Live / Gemini Live** | 实时 API | 语音到语音 |
 
 <details>
-<summary><b>16 项资源</b></summary>
+<summary><b>17 项资源</b></summary>
 
 ### 开源框架
 
@@ -127,6 +127,7 @@
 - 🟡 [OpenAI GPT-Live：指南](https://developers.openai.com/api/docs/guides/live)：全双工语音模型（`gpt-live-1`），可同时听与说、自行决定何时让出或打断，并把推理与工具调用交给后端文本模型；支持 WebRTC、WebSocket 或 SIP 接入。
 - 🟡 [Google Gemini Live API：概览](https://ai.google.dev/gemini-api/docs/live-api)：低延迟双向语音 + 视觉，支持插话（barge-in）与工具调用，基于 `gemini-3.8-live`（另有 Extended Thinking 版本）。
 - 🟡 [Twilio ConversationRelay](https://www.twilio.com/docs/voice/conversationrelay)：WebSocket 桥接，托管 STT/TTS，你专注 LLM 逻辑；可与任意 LLM 配合。
+- 🟡 [ThunderPhone Realtime API](https://thunderphone.com/docs/api-reference/realtime)：兼容 OpenAI Realtime 协议的语音到语音 WebSocket，面向电话智能体（47 种语言、支持电话接入），提供 Pipecat 与 LiveKit Agents 官方插件。
 ### 厂商中立对比
 
 - 🟡 [Vapi vs Pipecat vs LiveKit（AssemblyAI）](https://www.assemblyai.com/blog/vapi-vs-pipecat-vs-livekit)：从架构视角对比流水线控制与传输选型。
@@ -198,7 +199,7 @@
 | **Chatterbox** | 开源 | 克隆 + 情感控制 |
 
 <details>
-<summary><b>18 项资源</b></summary>
+<summary><b>19 项资源</b></summary>
 
 ### 商业 API
 
@@ -208,6 +209,7 @@
 - 🟢 [OpenAI TTS（gpt-4o-mini-tts）](https://developers.openai.com/api/docs/guides/text-to-speech)：OpenAI 栈里最容易接入的 TTS。
 - 🟢 [Soniox 文字转语音](https://soniox.com/docs/tts/get-started)：低延迟流式 TTS（WebSocket，另有 REST API），多语种音色；与 Soniox STT 及翻译搭配，构成单供应商实时语音到语音栈。
 - 🟢 [Gradium TTS](https://docs.gradium.ai/guides/text-to-speech)：基于 WebSocket 的流式 TTS，P50 首音频延迟 158 ms，支持五种语言的即时声音克隆。
+- 🟢 [Gandr TTS](https://gandr.ai/docs)：通过 SSE 或 WebSocket 提供流式 TTS，P50 首音频延迟 116 ms（厂商数据），六种多语种音色覆盖 23 种语言，输出带水印；提供 LiveKit Agents 与 Pipecat 集成。
 - 🟢 [Speechify Text-to-Speech API（Simba 3.2）](https://docs.speechify.ai/build/guides/get-started/quickstart)：基于 HTTP 的流式 TTS，支持 SSML 与情感控制；Simba 3.2 面向英语，Simba 3.0 覆盖六种语言，在 Coval 独立基准中首音频中位延迟为 106 ms（2026 年 9 月）。
 - 🟢 [Artificial Analysis：TTS 榜单](https://artificialanalysis.ai/text-to-speech/models)：ELO、价格与速度对比，含 Cartesia、ElevenLabs、Google、Inworld、Rime、Hume 与开放权重模型。
 - 🟡 [Best Text-to-Speech Providers in 2026（Coval）](https://www.coval.ai/blog/best-text-to-speech-providers-in-2026-how-to-choose-%28and-why-vendor-benchmarks-lie%29/)：对 14 家 TTS 供应商在延迟、自然度与成本上的独立横评；注意作者为商业方。
@@ -339,7 +341,7 @@
 - 🟡 [SignalWire Voice 文档](https://signalwire.com/docs/platform/voice)：基于 FreeSWITCH；SWML、类 TwiML API 与语音智能体 SDK（AI Agents SDK）。
 - 🟢 [LiveKit SIP Primer](https://docs.livekit.io/reference/telephony/sip-primer/)：PSTN → 中继 → SIP 服务 → 语音智能体 的最佳示意图说明。
 - 🟡 [LiveKit SIP Trunk Setup](https://docs.livekit.io/telephony/start/sip-trunk-setup/)：将 Twilio/Telnyx/Plivo/Wavix/Sinch 中继接入 LiveKit 的实操。
-- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/realtime-sip)：把 SIP 中继直接指向 OpenAI 的 SIP 端点，通过 webhook 接听每通来电并按通话配置会话，无需媒体桥接服务器；提供欧盟端点。
+- 🟡 [OpenAI Realtime API with SIP](https://developers.openai.com/api/docs/guides/voice-sip)：把 SIP 中继直接指向 OpenAI 的 SIP 端点，通过 webhook 接听每通来电并按通话配置会话，无需媒体桥接服务器；提供欧盟端点。
 - 🟡 [Pipecat Telephony Overview](https://docs.pipecat.ai/pipecat/telephony/overview)：基于 WebSocket 的电话与基于 SIP 的呼叫控制之差异。
 
 </details>
